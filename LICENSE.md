@@ -1,6 +1,6 @@
 This is NOT an Open Source Initiative (OSI) approved license.
 
-Atomic Memory Reference Implementation
+ATOMIC MEMORY™ Reference Implementation
 Copyright (c) 2025 QSymbolic LLC
 Patent Pending: US 19/286,600
 
