@@ -18,13 +18,15 @@ additional bus interface modules.
 
 ## 📦 Directory Contents
 
-collapse_cell.sv        # Core Atomic Memory cell
-collapse_bank.sv        # 1024-cell bank wrapper
-Atomic1024bank.sof      # Clean, uninstrumented FPGA build
-SignalTapCell.sof       # Instrumented build with SignalTap probes
-tcl/                    # Optional test scripts for automated interaction
-LICENSE                 # Full non-commercial research license
-README.md               # This file
+| File / Folder          | Description                                 |
+|------------------------|---------------------------------------------|
+| collapse_cell.sv       | Core Atomic Memory cell                     |
+| collapse_bank.sv       | 1024-cell bank wrapper                      |
+| Atomic1024bank.sof     | Clean, uninstrumented FPGA build            |
+| SignalTapCell.sof      | Instrumented build with SignalTap probes    |
+| tcl/                   | Optional test scripts for interaction       |
+| LICENSE                | Non-commercial research license             |
+| README.md              | This file                                   |
 
 ---
 
