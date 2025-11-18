@@ -71,11 +71,11 @@ first-read correctness or collapse semantics.
 
 ## 🔧 FPGA Images Provided
 
-### **`Atomic1024bank.sof`**
+### **`Atomic1024Bank.sof`**
 - Clean build without instrumentation  
 - Used for simple demonstrations and black-box verification
 
-### **`SignalTapCell.sof`**
+### **`SignalTap.sof`**
 - Same RTL with SignalTap probes enabled  
 - Captures internal collapse timing at 50 MHz
 
@@ -112,7 +112,7 @@ sequencer, or System Console workflows.
 ## 🖥️ Hardware Usage
 
 1. Open **Quartus Programmer**
-2. Load either `1024bank.sof` or `SignalTapCell.sof`
+2. Load either `Atomic1024Bank.sof` or `SignalTap.sof`
 3. Program the DE-SoC using USB-Blaster
 4. (Optional) Open **SignalTap** to observe:
    - First-read disclosure  
