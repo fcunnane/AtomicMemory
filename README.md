@@ -41,7 +41,7 @@ additional bus interface modules.
 ## 🧩 RTL Overview
 
 ### **collapse_cell.sv**
-Implements the ROOM primitive:
+Implements the ROOM (Read Only-Once Memory) primitive:
 
 - INIT loads value and basis  
 - **First correct-basis read discloses the stored value and collapses the cell atomically**  
