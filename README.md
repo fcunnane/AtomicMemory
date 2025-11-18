@@ -60,7 +60,7 @@ first-read correctness or collapse semantics.
 
 ## 🔧 FPGA Images Provided
 
-### **`1024bank.sof`**
+### **`Atomic1024bank.sof`**
 - Clean build without instrumentation  
 - Used for simple demonstrations and black-box verification
 
