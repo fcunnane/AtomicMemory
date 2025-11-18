@@ -44,7 +44,7 @@ additional bus interface modules.
 Implements the ROOM primitive:
 
 - INIT loads value and basis  
-- **First correct-basis read discloses the stored value and collapses the cell**  
+- **First correct-basis read discloses the stored value and collapses the cell in less than one clock**  
 - All subsequent reads return post-collapse obfuscated bytes  
 
 Internal metadata:
