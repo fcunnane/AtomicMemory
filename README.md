@@ -17,6 +17,7 @@ additional bus interface modules.
 ---
 
 ## 📦 Directory Contents
+
 collapse_cell.sv        # Core Atomic Memory cell
 collapse_bank.sv        # 1024-cell bank wrapper
 Atomic1024bank.sof      # Clean, uninstrumented FPGA build
