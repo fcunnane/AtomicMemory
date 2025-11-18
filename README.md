@@ -25,7 +25,7 @@ additional bus interface modules.
 | Atomic1024bank.sof     | Clean, uninstrumented FPGA build            |
 | SignalTapCell.sof      | Instrumented build with SignalTap probes    |
 | tcl/                   | Optional test scripts for interaction       |
-| LICENSE                | Non-commercial research license             |
+| LICENSE.md             | Non-commercial research license             |
 | README.md              | This file                                   |
 
 ---
