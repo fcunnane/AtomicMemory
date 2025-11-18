@@ -21,7 +21,7 @@ additional bus interface modules.
 | File / Folder                    | Description                                                                |
 |----------------------------------|----------------------------------------------------------------------------|
 | `fpga/collapse_cell.sv`          | Core Atomic Memory™ read-once cell (production-ready, patent-pending)     |
-| `fpga/collapse_bank.sv`          | 1024-cell bank with peer-cascade and shared entropy bus                   |
+| `fpga/collapse_bank.sv`          | 1024-cell bank with shared entropy bus                                    |
 | `fpga/Atomic1024Bank.sof`        | Clean 1024-cell bitstream (no SignalTap – fastest flash)                  |
 | `fpga/SignalTap.sof`             | Instrumented build with hands-free auto-running demo                      |
 | `fpga/SignalTap.stp`             | Pre-configured SignalTap file – open → Run → perfect collapse every time  |
