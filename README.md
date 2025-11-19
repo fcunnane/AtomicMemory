@@ -151,6 +151,13 @@ Email: **frank@qsymbolic.com**
 GET A 60-Day Evaluation License:
 https://franciscunnane.gumroad.com/l/AtomicMemory
 
+### 👤 Who Should Use This
+- ASIC/SoC security architects
+- PQC hardware teams (ML-KEM/TLS)
+- FPGA engineers evaluating collapse-on-read primitives
+- HSM designers
+- Embedded / IoT trust anchor teams
+  
 ---
 
 ## 📚 Citation
