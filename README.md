@@ -32,7 +32,7 @@ additional bus interface modules.
 | `fpga/program_signaltap.bat`     | Windows one-click flash (SignalTap demo)                                  |
 | `fpga/program_signaltap.sh`      | Linux/macOS one-click flash (SignalTap demo)                              |
 | `tcl/`                           | Optional System Console TCL scripts for automated testing                 |
-| `Perfect_Atomic_Waveform.png`    | Exact one-cycle disclosure + destroy waveform from the TechRxiv paper     |
+| `images/`                        | Exact one-cycle disclosure + destroy waveform from the TechRxiv paper     |
 | `LICENSE.md`                     | Non-Commercial License                                                    |
 | `README.md`                      | This file                                                                  |
 
