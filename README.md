@@ -146,6 +146,9 @@ See `LICENSE` for the full legal text.
 QSymbolic LLC  
 Email: **frank@qsymbolic.com**
 
+GET A 60-Day Evaluation License:
+https://franciscunnane.gumroad.com/l/AtomicMemory
+
 ---
 
 ## 📚 Citation
