@@ -1,3 +1,5 @@
+![Atomic Memory™ Logo](images/logo.png)
+
 # ATOMIC MEMORY™ — Reference FPGA Implementation (Cyclone V)
 
 This directory contains the reference RTL modules, precompiled FPGA
