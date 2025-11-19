@@ -150,4 +150,5 @@ Email: **frank@qsymbolic.com**
 
 ## 📚 Citation
 
-If used in academic work, please cite:
+If used in academic work, please cite: 
+Francis X. Cunnane III. Atomic Memory™: A CMOS Measurement-Collapse Primitive. TechRxiv.
