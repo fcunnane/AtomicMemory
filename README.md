@@ -1,4 +1,4 @@
-![Atomic Memory™ Logo](images/logo.png)
+![Atomic Memory™ Logo](images/AtomicMemory.png)
 
 # ATOMIC MEMORY™ — Reference FPGA Implementation (Cyclone V)
 
