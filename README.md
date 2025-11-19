@@ -14,6 +14,9 @@ additional bus interface modules.
 > **Patent Pending:** US 19/286,600  
 > **Target Hardware:** Intel Cyclone V (5CSEBA6 / DE-SoC)
 
+GET A 60-Day Evaluation License:
+https://franciscunnane.gumroad.com/l/AtomicMemory
+
 ---
 
 ## 📦 Directory Contents
@@ -145,9 +148,6 @@ See `LICENSE` for the full legal text.
 ### Commercial Licensing  
 QSymbolic LLC  
 Email: **frank@qsymbolic.com**
-
-GET A 60-Day Evaluation License:
-https://franciscunnane.gumroad.com/l/AtomicMemory
 
 ---
 
