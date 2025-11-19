@@ -13,7 +13,7 @@ additional bus interface modules.
 
 > **Status:** Research Artifact Release  
 > **License:** Non-commercial use only (see LICENSE below)  
-> **Patent Pending:** US 19/286,600  
+> **Patent Pending:** US 19/286,600 Track One
 > **Target Hardware:** Intel Cyclone V (5CSEBA6 / DE-SoC)
 
 ---
