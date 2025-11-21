@@ -146,6 +146,7 @@ See `LICENSE` for the full legal text.
 
 ### Commercial Licensing  
 QSymbolic LLC, Virginia Beach USA
+
 Email: **frank@qsymbolic.com**
 
 Ask About 60-Day Evaluation License for your team!
