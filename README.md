@@ -27,10 +27,10 @@ additional bus interface modules.
 | `fpga/Atomic1024Bank.sof`        | Clean 1024-cell bitstream (no SignalTap – fastest flash)                  |
 | `fpga/SignalTap.sof`             | Instrumented build with hands-free auto-running demo                      |
 | `fpga/SignalTap.stp`             | Pre-configured SignalTap file – open → Run → perfect collapse every time  |
-| `fpga/program_clean.bat`         | Windows/macOS one-click flash (clean version)                             |
+| `fpga/program_clean.bat`         | Windows one-click flash (clean version)                             |
 | `fpga/program_clean.sh`          | Linux one-click flash (clean version)                                     |
 | `fpga/program_signaltap.bat`     | Windows one-click flash (SignalTap demo)                                  |
-| `fpga/program_signaltap.sh`      | Linux/macOS one-click flash (SignalTap demo)                              |
+| `fpga/program_signaltap.sh`      | Linux one-click flash (SignalTap demo)                              |
 | `tcl/`                           | Optional System Console TCL scripts for automated testing                 |
 | `images/`                        | Exact one-cycle disclosure + destroy waveform from the TechRxiv paper     |
 | `LICENSE.md`                     | Non-Commercial License                                                    |
