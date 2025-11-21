@@ -148,7 +148,7 @@ See `LICENSE` for the full legal text.
 QSymbolic LLC  
 Email: **frank@qsymbolic.com**
 
-[60-Day Evaluation License](https://franciscunnane.gumroad.com/l/AtomicMemory)
+Ask About 60-Day Evaluation License for your team!
 
 ### 👤 Who Should Use This
 - ASIC/SoC security architects
