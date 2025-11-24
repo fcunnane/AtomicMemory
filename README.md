@@ -5,8 +5,7 @@
 This directory contains the reference RTL modules, precompiled FPGA
 images, and optional TCL test scripts for the **Atomic Memory™ (ROOM)**
 measurement-collapse primitive. The hardware demonstrates deterministic single-read
-disclosure followed by irreversible collapse and post-collapse obfuscated
-output behavior, all in am atomic propagation. 
+disclosure, and irreversible collapse all in an atomic propagation. 
 
 The provided `.sof` files allow direct hardware validation without any
 additional bus interface modules.
