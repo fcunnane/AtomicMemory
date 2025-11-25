@@ -2,10 +2,7 @@
 
 # ATOMIC MEMORY™ — Reference FPGA Implementation (Cyclone V)
 
-This directory contains the reference RTL modules, precompiled FPGA
-images, and optional TCL test scripts for the **Atomic Memory™ (ROOM)**
-measurement-collapse primitive. The hardware demonstrates deterministic single-read
-disclosure, and irreversible collapse in an atomic propagation. 
+This directory contains the reference RTL modules, precompiled FPGA images, and optional TCL test scripts for the Atomic Memory™ (ROOM) measurement–collapse primitive. Atomic Memory is a CMOS-compatible hardware measurement–collapse mechanism that enforces single-read semantics: the first qualified read returns the stored byte, and the act of measurement deterministically triggers an irreversible collapse event. After collapse, the cell produces only obfuscated or PRNG-derived outputs, ensuring that the original value cannot be recovered. The implementation demonstrates deterministic first-read disclosure, basis-conditioned access control, and atomic one-way state transitions across a bank of independent memory cells.
 
 The provided `.sof` files allow direct hardware validation without any
 additional bus interface modules.
