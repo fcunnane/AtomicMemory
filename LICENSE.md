@@ -30,7 +30,7 @@ subject to the following conditions:
    The Software is provided for research and evaluation under a 
    limited, non-exclusive, non-commercial patent grant. No rights to 
    practice, implement, manufacture, or commercialize the Atomic 
-   Memory™ / Read-Once Memory technology are granted or implied. 
+   Memory™ / Read Only-Once Memory technology are granted or implied. 
    Any commercial implementation—whether modified or unmodified—
    requires a separate patent license from QSymbolic LLC.
 
