@@ -1,8 +1,6 @@
-![Atomic Memory™ Logo](images/AtomicMemory.png)
+# Reference FPGA Implementation (Cyclone V)
 
-# ATOMIC MEMORY™ — Reference FPGA Implementation (Cyclone V)
-
-This directory contains the reference RTL modules, precompiled FPGA images, and optional TCL test scripts for the Atomic Memory™ (ROOM) measurement–collapse primitive. Atomic Memory is a CMOS-compatible hardware measurement–collapse mechanism that enforces single-read semantics: the first qualified read returns the stored byte, and the act of measurement deterministically triggers an irreversible collapse event. After collapse, the cell produces only obfuscated or PRNG-derived outputs, ensuring that the original value cannot be recovered. The implementation demonstrates deterministic first-read disclosure, basis-conditioned access control, and atomic one-way state transitions across a bank of independent memory cells.
+This directory contains the reference RTL modules, precompiled FPGA images, and optional TCL test scripts for the atomic measurement–collapse primitive. This primitive is a CMOS-compatible hardware measurement–collapse mechanism that enforces single-read semantics: the first qualified read returns the stored byte, and the act of measurement deterministically triggers an irreversible collapse event. After collapse, the cell produces only obfuscated or PRNG-derived outputs, ensuring that the original value cannot be recovered. The implementation demonstrates deterministic first-read disclosure, basis-conditioned access control, and atomic one-way state transitions across a bank of independent memory cells.
 
 The provided `.sof` files allow direct hardware validation without any
 additional bus interface modules.
@@ -18,48 +16,48 @@ additional bus interface modules.
 
 | File / Folder                    | Description                                                                |
 |----------------------------------|----------------------------------------------------------------------------|
-| `fpga/collapse_cell.sv`          | Core Atomic Memory™ read-once cell (production-ready, patent-pending)     |
-| `fpga/collapse_bank.sv`          | 1024-cell bank with shared entropy bus                                    |
-| `fpga/Atomic1024Bank.sof`        | Clean 1024-cell bitstream (no SignalTap – fastest flash)                  |
+| `fpga/collapse_cell.sv`          | Core primitive read-once cell used in the paper                           |
+| `fpga/collapse_bank.sv`          | 1024-cell bank with shared entropy/obfuscation bus                        |
+| `fpga/Atomic1024Bank.sof`        | Clean 1024-cell bitstream (no SignalTap – fastest flash path)             |
 | `fpga/SignalTap.sof`             | Instrumented build with hands-free auto-running demo                      |
-| `fpga/SignalTap.stp`             | Pre-configured SignalTap file – open → Run → perfect collapse every time  |
-| `fpga/program_clean.bat`         | Windows one-click flash (clean version)                             |
+| `fpga/SignalTap.stp`             | Pre-configured SignalTap file – open → Run → observe collapse timing      |
+| `fpga/program_clean.bat`         | Windows one-click flash (clean version)                                   |
 | `fpga/program_clean.sh`          | Linux one-click flash (clean version)                                     |
 | `fpga/program_signaltap.bat`     | Windows one-click flash (SignalTap demo)                                  |
-| `fpga/program_signaltap.sh`      | Linux one-click flash (SignalTap demo)                              |
+| `fpga/program_signaltap.sh`      | Linux one-click flash (SignalTap demo)                                    |
 | `tcl/`                           | Optional System Console TCL scripts for automated testing                 |
-| `images/`                        | Exact one-cycle disclosure + destroy waveform from the TechRxiv paper     |
-| `LICENSE.md`                     | Non-Commercial License                                                    |
+| `images/`                        | One-cycle disclosure + destroy waveform from the associated paper         |
+| `LICENSE.md`                     | Non-commercial license                                                     |
 | `README.md`                      | This file                                                                  |
-
-
 
 ---
 
 ## 🧩 RTL Overview
 
-### **collapse_cell.sv**
-Implements the ROOM (Read Only-Once Memory) primitive:
+### `collapse_cell.sv`
 
-- INIT loads value and basis  
+Implements the measurement–collapse read-once memory (ROOM) primitive:
+
+- `INIT` loads value and basis  
 - **First correct-basis read discloses the stored value and collapses the cell atomically**  
 - All subsequent reads return post-collapse obfuscated bytes  
 
-Internal metadata:
+Key internal state:
 
 - `basis_valid_q`  
 - `armed_q`  
 - `collapsed_q`
 
-### **collapse_bank.sv**
-Implements the full 1024-cell Atomic Memory array. This module performs:
+### `collapse_bank.sv`
+
+Implements the full 1024-cell array. This module provides:
 
 - Parallel instantiation of 1024 `collapse_cell` units  
 - Address decode and routing for selecting a single active cell  
 - Uniform broadcast of metadata inputs (basis byte, read pulse, init pulse)  
-- Aggregation of output paths (`data_o`, `collapsed_q`, etc.)  
+- Aggregation of output paths (`data_o`, `collapsed_q`, status, etc.)  
 - Optional ring-oscillator (RO) drive to support post-collapse oscillation-based
-  entropy generation at the bank level.
+  entropy/obfuscation at the bank level
 
 The RO path is only active **after collapse** and contributes to the
 post-collapse obfuscated output stream when enabled. It does not affect
@@ -69,15 +67,17 @@ first-read correctness or collapse semantics.
 
 ## 🔧 FPGA Images Provided
 
-### **`Atomic1024Bank.sof`**
+### `Atomic1024Bank.sof`
+
 - Clean build without instrumentation  
 - Used for simple demonstrations and black-box verification
 
-### **`SignalTap.sof`**
+### `SignalTap.sof`
+
 - Same RTL with SignalTap probes enabled  
 - Captures internal collapse timing at 50 MHz
 
-Probed signals:
+Probed signals (see `SignalTap.stp`):
 
 - `read_pulse`  
 - `basis_in[7:0]`  
@@ -94,14 +94,14 @@ Probed signals:
 These optional scripts are provided for users who wish to automate
 interactions, drive sequences, or reproduce the internal test flow.
 
-Example scripts may include:
+Example capabilities include:
 
 - Automated read sequences  
 - Basis sweep testing  
 - Collapse confirmation cycles  
 - Bulk sampling into local logs  
 
-These scripts do **not** depend on any bus interface included in this
+These scripts do **not** depend on any bus interface HDL included in this
 artifact. Users may adapt them for their own host interface, GPIO
 sequencer, or System Console workflows.
 
@@ -117,18 +117,18 @@ sequencer, or System Console workflows.
    - Collapse event  
    - Post-collapse output evolution  
 
-No Avalon-MM slave or external IP wrapper is provided or required.
+No Avalon-MM slave or external IP wrapper is required to use these images.
 
 ---
 
 ## 📄 License
 
-See the full `LICENSE` file.  
+See the full `LICENSE.md` file.  
 A non-commercial research license applies.
 
 ---
 
-## 📜 **LICENSE (Summary)**
+## 📜 License (Summary)
 
 - Non-commercial research, teaching, and evaluation permitted  
 - Commercial use requires a separate license from QSymbolic LLC  
@@ -136,27 +136,23 @@ A non-commercial research license applies.
 - Attribution required  
 - No warranty; no liability  
 
-See `LICENSE` for the full legal text.
+This summary is informational only. The full text in `LICENSE.md` controls.
 
----
-
-### Commercial Licensing  
-QSymbolic LLC, Virginia Beach USA
-
-Email: **frank@qsymbolic.com**
-
-Ask About 60-Day Evaluation License for your team!
-
-### 👤 Who Should Use This
-- ASIC/SoC security architects
-- PQC hardware teams (ML-KEM/TLS)
-- FPGA engineers evaluating collapse-on-read primitives
-- HSM designers
-- Embedded / IoT trust anchor teams
-  
 ---
 
 ## 📚 Citation
 
-If used in academic work, please cite: 
-Francis X. Cunnane III. Atomic Memory™: A CMOS Measurement-Collapse Primitive. TechRxiv.
+If you use this artifact in academic work, please cite the associated paper:
+
+> F. X. Cunnane III, “A CMOS Measurement–Collapse Primitive for Ephemeral Secrets in Post-Quantum Cryptography,” preprint, 2025.
+
+BibTeX example:
+
+```bibtex
+@misc{cunnane2025measurementcollapse,
+  author       = {Francis X. Cunnane III},
+  title        = {A CMOS Measurement--Collapse Primitive for Ephemeral Secrets in Post-Quantum Cryptography},
+  year         = {2025},
+  note         = {Preprint},
+  howpublished = {\url{https://github.com/fcunnane/AtomicMemory}}
+}
