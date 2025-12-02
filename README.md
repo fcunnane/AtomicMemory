@@ -146,15 +146,20 @@ This summary is informational only. The full text in `LICENSE.md` controls.
 
 If you use this artifact in academic work, please cite the associated paper:
 
-> F. X. Cunnane III, “A CMOS Measurement–Collapse Primitive for Ephemeral Secrets in Post-Quantum Cryptography,” preprint, 2025.
+> **Cite as:**  
+> Francis X. Cunnane III. *A CMOS Measurement–Collapse Primitive for Ephemeral Secrets in Post-Quantum Cryptography.* TechRxiv. December 02, 2025.  
+> https://doi.org/10.36227/techrxiv.176463742.23048082/v1
 
-BibTeX example:
+**BibTeX example:**
 
 ```bibtex
 @misc{cunnane2025measurementcollapse,
-  author       = {Francis X. Cunnane III},
+  author       = {Cunnane III, Francis X.},
   title        = {A CMOS Measurement--Collapse Primitive for Ephemeral Secrets in Post-Quantum Cryptography},
   year         = {2025},
-  note         = {Preprint},
-  howpublished = {\url{https://github.com/fcunnane/AtomicMemory}}
+  month        = dec,
+  note         = {TechRxiv},
+  doi          = {10.36227/techrxiv.176463742.23048082/v1},
+  url          = {https://doi.org/10.36227/techrxiv.176463742.23048082/v1}
 }
+
