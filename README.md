@@ -27,8 +27,10 @@ additional bus interface modules.
 | `fpga/program_signaltap.sh`      | Linux one-click flash (SignalTap demo)                                    |
 | `tcl/`                           | Optional System Console TCL scripts for automated testing                 |
 | `images/`                        | One-cycle disclosure + destroy waveform from the associated paper         |
+| `ROADMAP.md`                     | Project roadmap and planned ASIC/FPGA development stages                  |
 | `LICENSE.md`                     | Non-commercial license                                                     |
 | `README.md`                      | This file                                                                  |
+
 
 ---
 
