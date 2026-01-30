@@ -148,7 +148,7 @@ If you use this artifact in academic work, please cite the associated paper:
 
 > **Cite as:**  
 > Francis X. Cunnane III. *A CMOS Measurement–Collapse Primitive for Ephemeral Secrets in Post-Quantum Cryptography.* TechRxiv. December 02, 2025.  
-> https://doi.org/10.36227/techrxiv.176463742.23048082/v2
+> https://doi.org/10.36227/techrxiv.176463742.23048082/v3
 
 **BibTeX example:**
 
